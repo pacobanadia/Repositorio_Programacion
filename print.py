@@ -75,3 +75,7 @@ print("1234".isdigit()) #verifica si es numerico
 print("aDolFo123".isalnum()) #verifica si es alfanumerico
 print("r"in"roberto") #verifica si un caracter esta en la cadena
 print(len("aDolFo")) #longitud de la cadena
+
+evaluar="hola mundo"
+print("""docstring
+    esto es un docstring""") #lo escribe tal cual

@@ -1,12 +1,16 @@
-<<<<<<< HEAD
-"Lorem ipsum dolor sit amet, consectetur adipiscing
-elit, sed do eiusmod tempor incididunt ut labore et
-dolore magna aliqua. Ut enim ad minim veniam, quis 
-nostrud exercitation ullamco laboris nisi ut 
-aliquip ex ea commodo consequat. Duis aute irure
-dolor in reprehenderit in voluptate velit esse 
-cillum dolore eu fugiat nulla pariatur. Excepteur
-sint occaecat cupidatat non proident, sunt in culpa
-qui officia deserunt mollit anim id est laborum."
-=======
-segundo commit "añade operaciones trigonométricas"
+# Proyecto PyTorch – Entrenamiento de una Red Neuronal Senoidal
+
+## 🧠 Descripción general
+
+Este proyecto corresponde al **Entregable 1 de Programación 2025** y tiene como objetivo **entrenar una red neuronal simple** utilizando **PyTorch** para ajustar la función:
+
+\[
+y = \sin(x)
+\]
+
+El propósito es familiarizarse con los componentes fundamentales de PyTorch: **tensores**, **modelos neuronales**, **función de pérdida** y **proceso de entrenamiento**.
+
+---
+
+## 🧩 Estructura del proyecto
+

@@ -1,4 +1,7 @@
 # Byte-compiled / optimized / DLL files
+#ignorar entorno virtual
+env/
+# archivos temporales de Python compilados
 __pycache__/
 *.py[codz]
 *$py.class
@@ -75,7 +78,7 @@ docs/_build/
 .pybuilder/
 target/
 
-# Jupyter Notebook
+# configuración de Jupyter Notebook
 .ipynb_checkpoints
 
 # IPython

@@ -88,4 +88,4 @@ El modelo logra converger exitosamente, reduciendo el Error Cuadrático Medio (M
 
 **Daniel Cano Duque**
 * Entregable 1 - Programación 2025
-* [cite_start]Proyecto: Entrenamiento de una red neuronal simple[cite: 6, 7].
+* Proyecto: Entrenamiento de una red neuronal simple.

@@ -18,11 +18,11 @@ El código sigue un enfoque orientado a objetos y realiza un ciclo de entrenamie
 
 ## 📖 Descripción
 
-[cite_start]El objetivo principal es familiarizarse con el flujo de trabajo en PyTorch[cite: 9]. El proyecto consiste en una clase `ModeloSenoidal` que encapsula las siguientes etapas:
+El objetivo principal es familiarizarse con el flujo de trabajo en PyTorch. El proyecto consiste en una clase `ModeloSenoidal` que encapsula las siguientes etapas:
 
-1.  [cite_start]**Generación de Datos:** Crea un dataset sintético de la función seno en el intervalo $(0, 2\pi)$ con mezcla aleatoria (shuffling) para evitar sobreajuste[cite: 13].
-2.  [cite_start]**Arquitectura:** Una red neuronal `Feed-Forward` con una capa oculta y función de activación `Tanh`[cite: 14].
-3.  [cite_start]**Entrenamiento Manual:** Implementación paso a paso del ciclo de entrenamiento (Forward pass, cálculo de Loss, Backward pass y actualización de pesos)[cite: 15].
+1.  **Generación de Datos:** Crea un dataset sintético de la función seno en el intervalo $(0, 2\pi)$ con mezcla aleatoria (shuffling) para evitar sobreajuste.
+2.  **Arquitectura:** Una red neuronal `Feed-Forward` con una capa oculta y función de activación `Tanh`[cite: 14].
+3.  **Entrenamiento Manual:** Implementación paso a paso del ciclo de entrenamiento (Forward pass, cálculo de Loss, Backward pass y actualización de pesos).
 4.  **Evaluación:** Visualización de la curva de predicción vs. real y la convergencia de la pérdida (MSE).
 
 ---
@@ -41,8 +41,7 @@ El proyecto utiliza las siguientes librerías:
 
 1.  **Clonar el repositorio:**
     ```bash
-    git clone <url-de-tu-repositorio>
-    cd <nombre-de-la-carpeta>
+    git clone <https://github.com/pacobanadia/Repositorio_Programacion.git>
     ```
 
 2.  **Instalar dependencias:**

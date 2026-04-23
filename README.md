@@ -7,12 +7,12 @@ El código sigue un enfoque orientado a objetos y realiza un ciclo de entrenamie
 ---
 
 ## 📋 Tabla de Contenidos
-- [Descripción](#descripción)
-- [Requisitos](#requisitos)
-- [Instalación y Ejecución](#instalación-y-ejecución)
-- [Estructura del Código](#estructura-del-código)
-- [Resultados](#resultados)
-- [Autor](#autor)
+- [Descripción](#Descripción)
+- [Requisitos](#Requisitos)
+- [Instalación y Ejecución](#Instalación-y-Ejecución)
+- [Estructura del Código](#Estructura-Del-Código)
+- [Resultados](#Resultados)
+- [Autor](#Autor)
 
 ---
 

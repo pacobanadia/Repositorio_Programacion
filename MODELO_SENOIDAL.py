@@ -1,6 +1,6 @@
 # modelo_senoidal.py
 # Autor: Daniel Cano Duque
-# Proyecto PyTorch 2025 – Entregable 1
+# Proyecto PyTorch 2026 
 
 try:
     import torch
@@ -10,6 +10,31 @@ except (ModuleNotFoundError, ImportError) as e:
 
 import numpy as np
 import matplotlib.pyplot as plt
+
+class HamiltonianActivation(nn.Module):
+    """
+    Clase de activación personalizada que implementa la función f(x) = -4x^3 + 2x.
+
+    Esta función se utiliza como una activación en la red neuronal y puede interpretarse
+    como la derivada de un Hamiltoniano efectivo. En física de sistemas cuánticos,
+    especialmente en el contexto de materiales como el grafeno oxidado, las funciones
+    de activación pueden modelar respuestas no lineales que surgen de interacciones
+    fundamentales. En este caso, si consideramos un Hamiltoniano efectivo H(x) dado por:
+
+    H(x) = -x^4 + x^2 + c
+
+    la derivada de este Hamiltoniano con respecto a x es:
+
+    dH/dx = d/dx (-x^4 + x^2) = 4x^3 - 2x
+
+    Por lo tanto, esta función de activación representa la fuerza o el cambio de energía
+    asociado a la variación de un parámetro x en el sistema. Su uso en una red neuronal
+    permite que el modelo capture dinámicas no lineales que son análogas a las presentes
+    en sistemas físicos complejos, proporcionando una base teórica para la elección
+    de esta activación particular en el modelado de fenómenos físicos.
+    """
+    def forward(self, x):
+        return 4 * x**3 - 1 * x 
 
 class ModeloSenoidal:
     """
@@ -61,7 +86,7 @@ class ModeloSenoidal:
         """
         self.modelo = nn.Sequential(
             nn.Linear(1, 20),   # Aumentado a 20 neuronas para mejor "suavidad"
-            nn.Tanh(),          # Tanh es excelente para funciones como seno
+            HamiltonianActivation(), # Activación personalizada basada en la derivada de un Hamiltoniano efectivo
             nn.Linear(20, 1)   # Capa de salida
         )
         return self.modelo #| Retornar modelo construido
@@ -148,6 +173,14 @@ class ModeloSenoidal:
         plt.yscale("log") # Escala logarítmica para ver mejor la convergencia final
         plt.grid(True, alpha=0.3)  # Cuadrícula más sutil
 
+        #subplot 3: curva de perdida (validación vs Epoch)
+        plt.subplot(1, 3, 3) # Pérdida de validación en escala logarítmica
+        plt.plot(self.historial_perdidas_val, label="MSE Loss Validación", color="orange") # Color más visible
+        plt.title("Evolución de la Pérdida de Validación durante Entrenamiento") # Título descriptivo
+        plt.xlabel("Épocas") # Número de épocas en el eje x
+        plt.ylabel("Pérdida (MSE)") # Pérdida en el eje y
+        plt.yscale("log") # Escala logarítmica para ver mejor la convergencia final
+        plt.grid(True, alpha=0.3)  # Cuadrícula más sutil
 
         plt.tight_layout()  # Ajustar subplots para evitar solapamientos
         plt.savefig(nombre_archivo) # Guardar figura
